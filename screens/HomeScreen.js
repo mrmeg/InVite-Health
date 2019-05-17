@@ -17,13 +17,13 @@ export default class HomeScreen extends React.Component {
       // headerLeft: () => {
       //   return (
       //     <Image 
-      //       source={require('../assets/images/InVite-Health-round-logo.png')} 
+      //       source={require('../assets/images/InVite-Health-round-logo.png')}
       //       style={{width: 45, height: 45,}}
       //     />
       //   )
       // },
       headerStyle: {
-        backgroundColor: '#f34d25',
+        backgroundColor: '#FD4F00',
         // backgroundColor: '#444444'
       },
       headerTintColor: '#fff',
@@ -33,7 +33,6 @@ export default class HomeScreen extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <Text>Home screen content — Current promotions, store links, sign up/sign in.</Text>
-
       </ScrollView>
     );
   }

@@ -75,9 +75,15 @@ const RouteConfigs = {
 }
 
 const TabNavConfig = {
+  initialRouteName: 'NutritionStack',
   tabBarOptions: {
-    activeBackgroundColor: '#666666',
-    activeTintColor: 'orange'
+    activeBackgroundColor: '#212121',
+    inactiveBackgroundColor: '#212121',
+    activeTintColor: '#FD4F00',
+    // inactiveTintColor: '',
+    style: {
+      backgroundColor: '#212121',
+    }
   }
 }
 
