@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -11,23 +11,32 @@ import {
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
+import { Icon } from 'expo';
+
 export default class HomeScreen extends React.Component {
-  static navigationOptions = {
-      title: 'InVite Health',
-      // headerLeft: () => {
-      //   return (
-      //     <Image 
-      //       source={require('../assets/images/InVite-Health-round-logo.png')}
-      //       style={{width: 45, height: 45,}}
-      //     />
-      //   )
-      // },
-      headerStyle: {
-        backgroundColor: '#FD4F00',
-        // backgroundColor: '#444444'
-      },
-      headerTintColor: '#fff',
-  }
+  // static navigationOptions = {
+  //     title: 'InVite Health',
+  //     headerLeft: () => {
+  //       return (
+  //         <Icon.Ionicons 
+  //           name={
+  //             Platform.OS === 'ios'
+  //               ? 'ios-list'
+  //               : 'md-list'
+  //           }
+  //           size={36}
+  //           style={{paddingLeft: 12}}
+  //           color='black'
+  //           onPress={() => {console.warn('pressed')}}
+  //         />
+  //       )
+  //     },
+  //     headerStyle: {
+  //       backgroundColor: '#FD4F00',
+  //       // backgroundColor: '#444444'
+  //     },
+  //     headerTintColor: '#fff',
+  // }
 
   render() {
     return (

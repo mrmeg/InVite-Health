@@ -13,6 +13,7 @@ export default class ProfileScreen extends Component {
   }
 
   render() {
+    console.warn(this.props)
     return (
       <View>
         <Text> textInComponent </Text>

@@ -6,15 +6,15 @@ import { Ionicons } from '@expo/vector-icons';
 import { Container, Card, Form, ListItem, Left, Right, Radio } from 'native-base';
 
 export default class LinksScreen extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      title: 'Free Consultation',
-      headerStyle: {
-        backgroundColor: '#f34d25',
-      },
-      headerTintColor: '#fff',
-    };
-  };
+  // static navigationOptions = ({ navigation }) => {
+  //   return {
+  //     title: 'Free Consultation',
+  //     headerStyle: {
+  //       backgroundColor: '#f34d25',
+  //     },
+  //     headerTintColor: '#fff',
+  //   };
+  // };
 
 state = {
   contactPreference: {},
