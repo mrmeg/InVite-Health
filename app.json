@@ -12,7 +12,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/InViteHealth-splash.png",
+      "image": "./assets/images/white-splash-screen.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

@@ -41,7 +41,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Text>Home screen content — Current promotions, store links, sign up/sign in.</Text>
+        <Text style={{color: 'white'}}>I'm going to grow up into a big, beautiful component!</Text>
       </ScrollView>
     );
   }
@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#222222',
   },
 });

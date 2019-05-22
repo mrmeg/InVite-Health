@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, TouchableOpacity, ScrollView, View, Image } from 'react-native';
+import { Platform, TouchableOpacity, ScrollView, View, Image, Text } from 'react-native';
 import { 
   createDrawerNavigator,
   createStackNavigator,
@@ -11,19 +11,37 @@ import HomeScreen  from '../screens/HomeScreen';
 import NutritionScreen from '../screens/NutritionScreen';
 import RadioScreen from '../screens/RadioScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import { Icon } from 'expo';
+import { Icon, LinearGradient } from 'expo';
+
+const HeaderGradient = props => (
+  <View style={{flex: 1}}>
+    <LinearGradient
+      colors={['#222', '#ccc']}
+      style={{ padding: 15, alignItems: 'center'}}>
+      <Text
+        style={{
+          fontSize: 15,
+          color: '#fff',
+        }}>
+        InViteHealth
+      </Text>
+    </LinearGradient>
+  </View>
+)
 
 const DrawerComponent = props => (
-  <ScrollView style={{backgroundColor: 'black'}}>
+  <ScrollView style={{backgroundColor: '#222222'}}>
     <SafeAreaView style={{flex: 1}}>
       <View style={{
-          backgroundColor: 'black',
+          backgroundColor: '#222222',
           display: 'flex',
           alignItems: 'center'
         }}>
+      <View style={{paddingTop: 5}}>
         <Image 
           source={require('../assets/images/InVite-Health-round-logo.png')}
         />
+      </View>
       </View>
       <DrawerItems {...props} />
     </SafeAreaView>
@@ -53,17 +71,16 @@ const DrawerNavigator = createDrawerNavigator({
   ),
   contentOptions: {
     activeBackgroundColor: '#FD4F00',
-    inactiveBackgroundColor: 'black',
+    inactiveBackgroundColor: '#222222',
     activeTintColor: 'white',
     inactiveTintColor: 'white'
   },
   navigationOptions: ({ navigation }) => ({
     initialRoute: HomeStack,
     title: 'InVite Health',
-    headerStyle: {
-      backgroundColor: '#FD4F00',
-    },
-    headerTintColor: '#fff',
+    headerTransparent: true,
+    header: (props) => ( HeaderGradient(props) ),
+    headerTintColor: 'black',
     headerLeft: () => {
       return (
         <TouchableOpacity
@@ -76,7 +93,7 @@ const DrawerNavigator = createDrawerNavigator({
             }
             size={40}
             style={{paddingLeft: 16}}
-            color='black'
+            color='#222222'
           />
         </TouchableOpacity>
       )
